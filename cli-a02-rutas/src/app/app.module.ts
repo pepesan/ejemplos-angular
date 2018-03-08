@@ -6,13 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
+import { ParametrosComponent } from './parametros/parametros.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    AcercaDeComponent
+    AcercaDeComponent,
+    ParametrosComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

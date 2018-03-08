@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <p><button (click)="pulsado()">Pulsame!</button>{{texto}}</p>
+  <p>
+    <input (keyup)="onKey($event)">
+
+  </p>
+  <p>{{values}}</p>
+  <p><input #box (keyup)="0"></p>
+  <p>{{box.value}}</p>
+  <p><input #box2
+         (keyup.enter)="update(box2.value)"
+         (blur)="update(box2.value)"></p>
+
+  <p>{{value}}</p>
+  <input #newHero
+         (keyup.enter)="addHero(newHero.value)"
+         (blur)="addHero(newHero.value); newHero.value='' ">
+
+  <button (click)="addHero(newHero.value)">Add</button>
+
+  <ul>
+    <li *ngFor="let hero of heroes">{{hero}}</li>
+  </ul>
+</div>
+
+
