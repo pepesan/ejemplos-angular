@@ -1,10 +1,17 @@
 # CliA02Rutas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+El proyecto se ha generado con [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+
+Se ha ejecutado `ng new cli-a02-rutas --routing` para que se posibilitaran la gestión de rutas
+Nos hemos metido en el proyecto `cd cli-a02-rutas`
+Hemos generado dos componentes:
+`ng generate component Inicio`
+`ng generate component AcercaDe`
+Hemos cambiado el fichero `app-routing.module.ts` para incluir los dos componentes y su asociación a rutas
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Ejecuta `ng serve` para arrancar el servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que cambies cualquiera de los ficheros fuente.
 
 ## Code scaffolding
 
