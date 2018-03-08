@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<ul><li *ngFor="let item of data">{{item.titulo}}</li></ul>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Título</th>
+    <th>Autor</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of data">
+    <td>{{item.titulo}}</td>
+    <td>{{item.autor}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2>{{data |json}}</h2>
+

@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+  <tr>
+    <th>Título</th>
+    <th>Autor</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let libro of libros">
+    <td>{{ libro.titulo }}</td>
+    <td>{{ libro.autor }}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<h2>{{libros |json}}</h2>
+
