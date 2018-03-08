@@ -1,0 +1,71 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div>
+  <label>ID: {{usuario.id}}</label><br/>
+  <label>Nombre: {{usuario.name}}</label><br/>
+  <label>Tipo: {{usuario.tipo}}</label><br/>
+  <label>TLF: {{usuario.tlf}}</label><br/>
+  <label>Email: {{usuario.email}}</label><br/>
+</div>
+<div class="container">
+  <h1>Usuario Form</h1>
+  <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+    <input type="hidden" class="" id="id" required [(ngModel)]="usuario.id" name="id">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input #name="ngModel" type="text" class="form-control" id="name" required [(ngModel)]="usuario.name" name="name" minlength="4" appForbiddenName="bob">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf="name.errors.required">
+          El nombre es obligatorio
+        </div>
+        <div *ngIf="name.errors.minlength">
+          El nombre debe tener al menos 4 caracteres
+        </div>
+        <div *ngIf="name.errors.forbiddenName">
+          Bob es un nombre prohibido
+        </div>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tipo">Tipo de usuario</label>
+      <select #tipo="ngModel" class="form-control" id="tipo" required [(ngModel)]="usuario.tipo" name="tipo">
+        <option *ngFor="let nombre_tipo of tipos_usuario" [value]="nombre_tipo">{{nombre_tipo}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input #email="ngModel" type="email" class="form-control"
+             id="email" required="required" [(ngModel)]="usuario.email"
+             name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+      <div *ngIf="email.invalid && (email.dirty || email.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf="email.errors.required">
+          El email es obligatorio
+        </div>
+        <div *ngIf="email.errors?.pattern">
+          El email debe ser válido
+        </div>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tlf">Teléfono</label>
+      <input #tlf="ngModel" type="tel" class="form-control" id="tlf"
+             [(ngModel)]="usuario.tlf" name="tlf"/>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!registerForm.form.valid">Submit</button>
+
+  </form>
+  <div>
+    {{usuario | json}}
+  </div>
+</div>
