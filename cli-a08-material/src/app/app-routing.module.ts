@@ -11,7 +11,7 @@ const routes: Routes = [
     component: InicioComponent
   },
   {
-    path: 'acerca-de',
+    path: 'about',
     component: AcercaDeComponent
   }
 ];
