@@ -9,7 +9,7 @@
 
   </p>
   <p>{{values}}</p>
-  <p><input #box (keyup)="0"></p>
+  <p><input id="micaja" #box (keyup)="0"></p>
   <p>{{box.value}}</p>
   <p><input #box2
          (keyup.enter)="update(box2.value)"
@@ -23,7 +23,7 @@
   <button (click)="addHero(newHero.value)">Add</button>
 
   <ul>
-    <li *ngFor="let hero of heroes">{{hero}}</li>
+    <li *ngFor="let item of heroes">{{item}}</li>
   </ul>
 </div>
 

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   texto="";
-  values:any;
+  values:string;
   value = '';
   heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   pulsado(){
@@ -18,7 +18,10 @@ export class AppComponent {
     this.values = "Texto introducido: "+event.target.value ;
   }
 
-  update(value: string) { this.value = value; }
+  update(value: string) { 
+      this.value = value; 
+  }
+    
   addHero(newHero: string) {
     if (newHero) {
       this.heroes.push(newHero);
