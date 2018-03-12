@@ -9,6 +9,7 @@ Hemos generado dos componentes:
 `ng generate component AcercaDe`
 Hemos cambiado el fichero `app-routing.module.ts` para incluir los dos componentes y su asociación a rutas
 
+
 ## Development server
 
 Ejecuta `ng serve` para arrancar el servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que cambies cualquiera de los ficheros fuente.

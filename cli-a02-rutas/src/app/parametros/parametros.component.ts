@@ -8,11 +8,24 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ParametrosComponent implements OnInit, OnDestroy {
 
-  iden:any;
+  iden:string;
   sub:any;
-    
+  objeto:any;
+  //route: ActivatedRoute;
   constructor(private route: ActivatedRoute) {
-      this.sub=this.route.params.subscribe( parameters => this.iden=parameters.id );
+      //this.route=new ActivatedRoute();
+      this.sub=this.route.params.subscribe(
+        /*
+            function (parameters){
+              this.iden=parameters.id;
+            }
+         */
+        parameters => this.iden=parameters.id
+      );
+      this.objeto={
+        att1:"hola",
+        att2:"mundo"
+      };
   }
 
   ngOnInit() {

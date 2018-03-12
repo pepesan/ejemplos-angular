@@ -10,14 +10,17 @@ export class SearchComponent implements OnInit {
 
   texto:string;
   sub:any;
-    
-  constructor(private route: ActivatedRoute) { 
-    this.sub=this.route.params.subscribe( parameters => this.texto=parameters.texto );
+  otro_texto:string;
+  constructor(private route: ActivatedRoute) {
+    //this.otro_texto=this.route.snapshot.params.texto;
+    this.sub=this.route.params.subscribe(
+      parameters => this.texto=parameters.texto
+    );
   }
 
   ngOnInit() {
   }
-  
+
   ngOnDestroy() {
       this.sub.unsubscribe();
   }
