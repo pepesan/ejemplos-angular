@@ -9,7 +9,7 @@
 
   </p>
   <p>{{values}}</p>
-  <p><input id="micaja" #box (keyup)="0"></p>
+  <p><input #box (keyup)="0"></p>
   <p>{{box.value}}</p>
   <p><input #box2
          (keyup.enter)="update(box2.value)"
@@ -24,6 +24,9 @@
 
   <ul>
     <li *ngFor="let item of heroes">{{item}}</li>
+  </ul>
+  <ul>
+    <li *ngFor="let item of complejo">{{item.nombre}}: edad {{item.edad}}</li>
   </ul>
 </div>
 

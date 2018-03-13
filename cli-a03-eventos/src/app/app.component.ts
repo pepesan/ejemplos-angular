@@ -11,6 +11,15 @@ export class AppComponent {
   values:string;
   value = '';
   heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  complejo=[
+      {
+          nombre:"Pepe",
+          edad:21
+      },{
+          nombre:"Luisa",
+          edad:34
+      }
+  ];
   pulsado(){
       this.texto="Botón pulsado";
   }
