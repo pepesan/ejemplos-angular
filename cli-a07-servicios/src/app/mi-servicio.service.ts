@@ -7,7 +7,7 @@ export class MiServicioService {
 
   promesaDatos:any;
   url:string;
-  private loginSource = new BehaviorSubject<string>(false);
+  private loginSource = new BehaviorSubject<boolean>(false);
   currentLogin = this.loginSource.asObservable();
 
   constructor(private http:HttpClient) {

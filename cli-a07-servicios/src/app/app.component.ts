@@ -37,16 +37,16 @@ export class AppComponent implements OnInit, OnDestroy{
     this.promesaDatos.subscribe(this.muestraLibros.bind(this));
   }
   muestraLibros(datos){
-    console.log(datos);
+    //console.log(datos);
     this.libros=datos;
   }
   loguear(){
-        console.log("logueando");
+        //console.log("logueando");
         this.miServicio.setLogged(true);
         //this.logged=this.miServicio.getLogged();
   }
   desloguear(){
-      console.log("deslogueando");
+      //console.log("deslogueando");
         this.miServicio.setLogged(false);
         //this.logged=this.miServicio.getLogged();
   }
