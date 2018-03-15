@@ -11,6 +11,7 @@ export class MiServicioService {
   currentLogin = this.loginSource.asObservable();
 
   constructor(private http:HttpClient) {
+    console.log("Servicio cargado");
     this.url="http://www.mocky.io/v2/5a54ae822d00005f235b1cd2";
     this.promesaDatos=this.http.get(this.url);
   }

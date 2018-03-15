@@ -1,23 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { MiServicioService } from './mi-servicio.service';
 import { DatosService } from './datos.service';
 
 import { AppComponent } from './app.component';
+import { CompartidoComponent } from './compartido/compartido.component';
+import { MiServicioService } from './mi-servicio.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CompartidoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
   providers: [
-    MiServicioService,
-    DatosService
+    DatosService,
+    MiServicioService
   ],
   bootstrap: [AppComponent]
 })

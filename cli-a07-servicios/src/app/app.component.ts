@@ -27,7 +27,7 @@ export class AppComponent implements OnInit, OnDestroy{
       this.login=false;
     this.logged=this.miServicio.getLogged();
       this.logged.subscribe(
-        this.actualizaLogin.bind(this);
+        this.actualizaLogin.bind(this)
       );
   }
   actualizaLogin(datos){
