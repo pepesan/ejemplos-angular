@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers : [MiServicioService,DatosService]
+
 })
 export class AppComponent implements OnInit, OnDestroy{
 
