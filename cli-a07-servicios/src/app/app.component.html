@@ -22,3 +22,15 @@
 
 <h2>{{libros|json}}</h2>
 
+<div *ngIf="login">
+    <h1>Estoy Loggeado</h1>
+    <div id="menu_logout">
+        <button (click)="desloguear()">Desloguear</button>
+    </div>
+</div>
+<div *ngIf="!login">
+    <h1>No estoy Loggeado</h1>
+    <div id="menu_login">
+        <button (click)="loguear()">Loguear</button>
+    </div>
+</div>
